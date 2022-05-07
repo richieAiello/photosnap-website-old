@@ -1,0 +1,25 @@
+{
+  "name": "photosnap-website",
+  "version": "1.0.0",
+  "description": "Frontend mentor advanced design.",
+  "source": "src/html/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/photosnap-website.git"
+  },
+  "keywords": [],
+  "author": "https://github.com/richieAiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/photosnap-website/issues"
+  },
+  "homepage": "https://github.com/richieAiello/photosnap-website#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0",
+    "sass": "^1.51.0"
+  }
+}
