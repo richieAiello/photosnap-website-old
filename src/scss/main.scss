@@ -1,0 +1,59 @@
+/****************************************
+  VARIABLES
+****************************************/
+$black: #000000;
+$white: #FFFFFF;
+$grey: #DFDFDF;
+$gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
+
+/****************************************
+  RESET AND SCROLLBAR
+****************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/****************************************
+  BASE STYLES
+****************************************/
+.body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+// Placed above class hidden to not interfer with display toggling
+.btn {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: initial;
+}
+
+/****************************************
+  NAV
+****************************************/
+.nav {
+
+  &__menu {
+    display: none;
+  }
+}
+
+/****************************************
+  BUTTONS
+****************************************/
+.btn {
+  background-color: initial;
+  border: initial;
+  font-family: inherit;
+}
