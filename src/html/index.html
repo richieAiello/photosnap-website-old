@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +17,15 @@
 </head>
 <body class="body">
   <nav class="nav container">
-    <img src="../assets/shared/desktop/logo.svg" alt="">
+    <img src="../assets/icons/logo.svg" alt="Photosnap logo" class="logo">
     
     <button type="button" aria-label="Open navigation menu." class="btn btn--nav-open">
-      <img src="../assets/shared/mobile/menu.svg" alt="" class="hamburger">
+      <img src="../assets/icons/menu.svg" alt="" class="hamburger">
     </button>
 
     <!-- Hidden on page load. -->
     <button type="button" aria-label="Close navigation menu." class="btn btn--nav-close hidden">
-      <img src="../assets/shared/mobile/close.svg" alt="" class="hamburger">
+      <img src="../assets/icons/close.svg" alt="" class="hamburger">
     </button>
 
     <div class="nav__menu">
@@ -41,77 +41,187 @@
         </li>
       </ul>
 
-      <button type="button" class="btn btn--nav">
+      <button type="button" class="btn btn--dark btn--nav">
         get an invite
       </button>
     </div>
   </nav>
+  <header class="hero">
+    <div class="hero__context container--secondary">
+      <h1 class="hero__heading heading">
+        Create and<br> 
+        share your<br>
+        photo Stories.
+      </h1>
+      <p class="hero__text">
+        Photosnap is a platform for photographers and visual storytellers. We make it 
+        easy to share photos, tell stories and connect with others.
+      </p>
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--hero">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="">
+      </a>
+      <!-- Absolutely positioned accent. -->
+      <div class="accent hero__accent"></div> 
+    </div> 
+
+    <!-- Displayed on mobile. -->
+    <img src="../assets/home/mobile/create-and-share.jpg" alt="" class="image image--create image--mobile">
+    <!-- Displayed on tablet. -->
+    <img src="../assets/home/tablet/create-and-share.jpg" alt="" class="image image--create image--tablet">
+    <!-- Displayed on desktop. -->
+    <img src="../assets/home/desktop/create-and-share.jpg" alt="" class="image image--create image--desktop">
+  </header>
+  <main class="main">
+    <section class="beautiful">
+      <div class="beautiful__context container--secondary">
+        <h2 class="main__heading heading">
+          Beautiful<br>
+          stories<br>
+          every time
+        </h2>
+        <p class="main__text">
+          We provide design templates to ensure your stories look terrific. Easily add 
+          photos, text, embed maps and media from other networks. Then share your story 
+          with everyone.
+        </p>
+        <a href="./stories.html" class="btn btn--arrow btn--arrow-dark btn--view">
+          view the stories
+        </a>
+      </div>
+
+      <!-- Displayed on mobile. -->
+      <img src="../assets/home/mobile/beautiful-stories.jpg" alt="" class="image image--beautiful image--mobile">
+      <!-- Displayed on tablet. -->
+      <img src="../assets/home/tablet/beautiful-stories.jpg" alt="" class="image image--beautiful image--tablet">
+      <!-- Displayed on desktop. -->
+      <img src="../assets/home/desktop/beautiful-stories.jpg" alt="" class="image image--beautiful image--desktop">
+    </section>
+    <section class="designed">
+      <div class="designed__context container--secondary">
+        <h2 class="main__heading heading">
+          Designed<br>
+          for<br>
+          everyone
+        </h2>
+        <p class="main__text">
+          Photosnap can help you create stories that resonate with your audience.  Our 
+          tool is designed for photographers of all levels, brands, businesses you name it.
+        </p>
+        <a href="./stories.html" class="btn btn--arrow btn--arrow-dark btn--view">
+          view the stories
+        </a>
+      </div>
+
+      <!-- Displayed on mobile. -->
+      <img src="../assets/home/mobile/designed-for-everyone.jpg" alt="" class="image image--designed image--mobile">
+      <!-- Displayed on tablet. -->
+      <img src="../assets/home/tablet/designed-for-everyone.jpg" alt="" class="image image--designed image--tablet">
+      <!-- Displayed on desktop. -->
+      <img src="../assets/home/desktop/designed-for-everyone.jpg" alt="" class="image image--designed image--desktop">
+    </section>
+    <section class="stories">
+      <div class="story">
+        <div class="story__slide">
+          <h3 class="story__heading">The Mountains</h3>
+          <p class="story__text">by John Appleseed</p>
+          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
+            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
+          </a>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story__slide">
+          <h3 class="story__heading">Sunset Cityscapes</h3>
+          <p class="story__text">by Benjamin Cruz</p>
+          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
+            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
+          </a>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story__slide">
+          <h3 class="story__heading">18 Days Voyage</h3>
+          <p class="story__text">by Alexei Borodin</p>
+          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
+            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
+          </a>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story__slide">
+          <h3 class="story__heading">Architecturals</h3>
+          <p class="story__text">by Samantha Brooke</p>
+          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
+            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="features container--secondary">
+      <div class="feature">
+        <div class="feature__context">
+          <h3 class="feature__heading">100% Responsive</h3>
+          <p class="feature__text">
+            No matter which the device you’re on, our site is fully responsive and stories 
+            look beautiful on any screen.
+          </p>
+        </div>
+
+        <img src="../assets/features/desktop/responsive.svg" alt="" class="feature__icon">
+      </div>
+      <div class="feature">
+        <div class="feature__context">
+          <h3 class="feature__heading">No Photo Upload Limit</h3>
+          <p class="feature__text">
+            Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
+            share all of your stories in one go.
+          </p>
+        </div>
+
+        <img src="../assets/features/desktop/no-limit.svg" alt="" class="feature__icon">
+      </div>
+      <div class="feature">
+        <div class="feature__context">
+          <h3 class="feature__heading">Available to Embed</h3>
+          <p class="feature__text">
+            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
+            Google Maps, and more.
+          </p>
+        </div>
+
+        <img src="../assets/features/desktop/embed.svg" alt="" class="feature__icon"> 
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <img src="../assets/icons/logo.svg" alt="Photosnap logo." class="logo">
+
+      <div class="footer__icons">
+        <!-- icons inserted via index.js -->
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="./index.html" class="footer__link link">home</a>
+        </li>
+        <li class="footer__item">
+          <a href="./stories.html" class="footer__link link">stories</a>
+        </li>
+        <li class="footer__item">
+          <a href="./features.html" class="footer__link link">features</a>
+        </li>
+        <li class="footer__item">
+          <a href="./pricing.html" class="footer__link link">pricing</a>
+        </li>
+      </ul> 
+    </div>
+
+    <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
+      get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="footer__arrow">
+    </a>
+
+    <p class="copyright">Copyright 2019. All Rights Reserved</p>
+  </footer>
 </body>
 </html>
-
-<!-- 
-Stories
-Features
-Pricing
-
-Get an invite
-
-Create and share your photo Stories
-
-Photosnap is a platform for photographers and visual storytellers. We make it 
-easy to share photos, tell stories and connect with others.
-
-Beautiful stories every time
-
-We provide design templates to ensure your stories look terrific. Easily add 
-photos, text, embed maps and media from other networks. Then share your story 
-with everyone.
-
-View the stories
-
-Designed for everyone
-
-Photosnap can help you create stories that resonate with your audience.  Our 
-tool is designed for photographers of all levels, brands, businesses you name it. 
-
-View the stories
-
-The Mountains
-by John Appleseed
-Read Story
-
-Sunset Cityscapes
-by Benjamin Cruz
-Read Story
-
-18 Days Voyage
-by Alexei Borodin
-Read Story
-
-Architecturals
-by Samantha Brooke
-Read Story
-
-100% Responsive
-
-No matter which the device you’re on, our site is fully responsive and stories 
-look beautiful on any screen.
-
-No Photo Upload Limit
-
-Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-share all of your stories in one go.
-
-Available to Embed
-
-Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-Google Maps, and more. 
-
-Home
-Stories
-Features
-Pricing
-
-Get an invite
-
-Copyright 2019. All Rights Reserved -->
