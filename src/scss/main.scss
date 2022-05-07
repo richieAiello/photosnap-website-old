@@ -25,18 +25,27 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   font-weight: 400;
 }
 
-// Placed above class hidden to not interfer with display toggling
-.btn {
-  display: inline-block;
-}
-
-.hidden {
-  display: none;
-}
-
+.btn,
 .link {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
   color: initial;
+}
+
+.heading {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accent {
+  background-image: $gradient;
+}
+
+// Placed below btn resets to not interfer with display toggling
+.hidden {
+  display: none;
 }
 
 /****************************************
@@ -50,10 +59,27 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 /****************************************
+  HERO
+****************************************/
+
+/****************************************
   BUTTONS
 ****************************************/
 .btn {
   background-color: initial;
   border: initial;
   font-family: inherit;
+}
+
+/****************************************
+  IMAGES
+****************************************/
+.image {
+  max-width: 100%;
+  object-fit: cover;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
