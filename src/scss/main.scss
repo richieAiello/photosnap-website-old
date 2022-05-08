@@ -63,6 +63,46 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 ****************************************/
 
 /****************************************
+  FOOTER
+****************************************/
+.footer {
+  background-color: $black;
+
+  &__icons {
+    width: max-content;
+    // background-color: rebeccapurple;
+  }
+
+  &__icon-link {
+    margin-right: 1rem;
+  }
+
+  &__icon-link:hover,
+  &__icon-link:focus {
+
+    .facebook {
+      fill: url(#facebook);
+    }
+
+    .youtube {
+      fill: url(#youtube);
+    }
+
+    .twitter {
+      fill: url(#twitter);
+    }
+
+    .pinterest {
+      fill: url(#pinterest);
+    }
+
+    .instagram {
+      fill: url(#instagram);
+    }
+  }
+}
+
+/****************************************
   BUTTONS
 ****************************************/
 .btn {
