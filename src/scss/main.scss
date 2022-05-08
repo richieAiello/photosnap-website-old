@@ -184,6 +184,29 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+.stories {
+  color: $white;
+}
+.story {
+  height: 375px;
+  position: relative;
+  background-color: rebeccapurple;
+  z-index: 0;
+
+  &__slide {
+    display: flex;
+    height: 375px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  } 
+
+  &__context {
+    margin-top: auto;
+  }
+}
+
 /****************************************
   FOOTER
 ****************************************/
@@ -314,11 +337,16 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &--create {
+    object-position: top;
     height: 294px;
   }
 
   &--beautiful,
   &--designed {
     height: 271px;
+  }
+
+  &--designed {
+    object-position: top;
   }
 }
