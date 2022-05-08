@@ -67,6 +67,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__menu {
