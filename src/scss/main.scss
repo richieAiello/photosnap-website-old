@@ -34,6 +34,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   color: initial;
 }
 
+.container {
+  width: calc(100% - 3rem);
+  margin-inline: auto;
+
+  // &--secondary {
+
+  // }
+}
+
 .heading {
   font-weight: 700;
   text-transform: uppercase;
@@ -52,9 +61,44 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   NAV
 ****************************************/
 .nav {
+  padding: 1.75rem 0;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__menu {
     display: none;
+    width: 100vw;
+    background-color: $white;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: 72px;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid rgba($black, 25%);
+  }
+
+  &__item {
+    margin-bottom: 1.25rem;
+  }
+
+  &__link {
+    font-size: 0.9375rem;
+    line-height: 19.53px;
+    letter-spacing: 2.5px;
+    transition: all 250ms;
+
+    &:hover,
+    &:focus {
+      color: rgba($black, 30%);
+    }
   }
 }
 
@@ -109,6 +153,41 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   background-color: initial;
   border: initial;
   font-family: inherit;
+  transition: all 400ms;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  &--dark {
+    background-color: $black;
+    color: $white;
+  }
+
+  &--light {
+    background-color: $white;
+    color: $black;
+  }
+
+  &--dark,
+  &--light {
+
+    &:hover,
+    &:focus {
+      background-color: $grey;
+      color: $black;
+    }
+  }
+
+  &--nav {
+    width: 100%;
+    font-size: 0.9375rem;
+    line-height: 19.53px;
+    letter-spacing: 2.5px;
+    padding: 0.875rem 0;
+    margin-top: 1.25rem;
+  }
 }
 
 /****************************************
