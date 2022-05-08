@@ -186,27 +186,117 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 .stories {
   color: $white;
+  background-color: $black;
+  
+  @media (min-width: 450px) {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      ". a ."
+      ". b ."
+      ". c ."
+      ". d .";
+  }
 }
+
 .story {
   height: 375px;
+  width: 100%;
+  margin-inline: auto;
   position: relative;
-  background-color: rebeccapurple;
+  background-color: $white;
   z-index: 0;
 
+  &--a {
+    grid-area: a;
+  }
+
+  &--b {
+    grid-area: b;
+  }
+
+  &--c {
+    grid-area: c;
+  }
+
+  &--d {
+    grid-area: d;
+  }
+
   &__slide {
-    display: flex;
     height: 375px;
     width: 100%;
     position: absolute;
     z-index: 1;
     bottom: 0;
+    transition: all 400ms;
+
+    .accent {
+      width: 100%;
+      height: 6px;
+      position: absolute;
+      bottom: -6px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      bottom: 24px;
+    }
   } 
 
   &__context {
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem 2.5rem 2rem;
+    background-image: linear-gradient(to bottom, rgba($black, 0%), rgba($black, 66%));
+  }
+
+  &__heading {
+    margin-top: auto;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    margin-bottom: 0.25rem;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-size: 0.8125rem;
+    line-height: 16.93px;
+    margin-bottom: 1rem;
   }
 }
 
+.slide-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--1 {
+    background-image: url(../assets/stories/desktop/mountains.jpg);
+  }
+  
+  &--2 {
+    background-image: url(../assets/stories/desktop/cityscapes.jpg);
+  }
+  
+  &--3 {
+    background-image: url(../assets/stories/desktop/18-days-voyage.jpg);
+  }
+  
+  &--4 {
+    background-image: url(../assets/stories/desktop/architecturals.jpg);
+  }
+}
+
+.features {
+  background-color: $white;
+  // Allows overlapping of slide accents.
+  position: relative;
+}
 /****************************************
   FOOTER
 ****************************************/
@@ -320,6 +410,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   &--view {
     .arrow {
       margin-left: 1.625rem;
+    }
+  }
+
+  &--story {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba($white, 25%);
+
+    .arrow {
+      margin-left: auto;
     }
   }
 }
