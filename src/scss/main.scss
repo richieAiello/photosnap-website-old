@@ -83,6 +83,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     position: absolute;
     left: 0;
     top: 70px;
+    z-index: 1;
   }
 
   &__list {
@@ -460,7 +461,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   background-color: $white;
   padding: 5rem 0;
   text-align: center;
-  // Allows overlapping of slide accents.
+  // Allows overlapping of slide accents in index.html.
   position: relative;
 }
 
@@ -537,6 +538,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   color: $white;
   padding: 3.5rem 0;
   text-align: center;
+  // Allows overlapping of slide accents in stories.html.
   position: relative;
 
   &__wrapper {
@@ -723,7 +725,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     display: none;
   }
 
-  &--create {
+  &--hero {
     object-position: top;
     height: 294px;
   }
@@ -735,10 +737,5 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--designed {
     object-position: top;
-  }
-
-  &--hero-stories {
-    height: 317px;
-    object-position: 70% 0%;
   }
 }
