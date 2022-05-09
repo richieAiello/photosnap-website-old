@@ -15,8 +15,91 @@
 
   <title>Photosnap Website | Stories</title>
 </head>
-<body>
+<body class="body">
+  <nav class="nav">
+    <div class="nav__wrapper container">
+      <img src="../assets/icons/logo-dark.svg" alt="Photosnap logo" class="logo">
+      
+      <button type="button" aria-label="Open navigation menu." class="btn btn--nav-open">
+        <img src="../assets/icons/menu.svg" alt="" class="hamburger">
+      </button>  
+      <!-- Hidden on page load. -->
+      <button type="button" aria-label="Close navigation menu." class="btn btn--nav-close hidden">
+        <img src="../assets/icons/close.svg" alt="" class="hamburger">
+      </button>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./features.html" class="nav__link link">Features</a>
+          </li>
+          <li class="nav__item">
+            <a href="./pricing.html" class="nav__link link">Pricing</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn--dark btn--nav">
+          get an invite
+        </button>
+      </div>
+    </div>
+  </nav>
+  <header class="hero hero--secondary">
+    <div class="hero__context container--secondary">
+      <h1 class="hero__heading heading">
+        Hazy full<br>
+        moon of<br>
+        Appalachia
+      </h1>
+      <h2 class="hero__sub-heading heading">
+        Last month's featured story
+      </h2>
+      <p class="hero__sub-text">
+        <span class="opaque">March 2nd 2020</span> by John Appleseed
+      </p>
+      <p class="hero__text">
+        The dissected plateau area, while not actually made up of geological mountains, 
+        is popularly called "mountains," especially in eastern Kentucky and West Virginia, 
+        and while the ridges are not high, the terrain is extremely rugged.
+      </p>
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--hero">
+        read the story <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+      </a>
+    </div> 
+
+    <img src="../assets/stories/desktop/moon-of-appalacia.jpg" alt="" class="image image--hero-stories">
+  </header>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <img src="../assets/icons/logo-light.svg" alt="Photosnap logo." class="logo">
+
+      <div class="footer__icons">
+        <!-- icons inserted via index.js -->
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="./index.html" class="footer__link link">home</a>
+        </li>
+        <li class="footer__item">
+          <a href="./stories.html" class="footer__link link">stories</a>
+        </li>
+        <li class="footer__item">
+          <a href="./features.html" class="footer__link link">features</a>
+        </li>
+        <li class="footer__item">
+          <a href="./pricing.html" class="footer__link link">pricing</a>
+        </li>
+      </ul>
+
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+      </a>
   
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
 

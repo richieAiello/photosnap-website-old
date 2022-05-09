@@ -41,7 +41,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   margin-inline: auto;
 
   &--secondary {
-    width: calc(100% - 4rem);
+    width: calc(100% - 3.5rem);
     margin-inline: auto;
   }
 }
@@ -139,9 +139,37 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__text {
-    margin-bottom: 1.4375rem;
+    margin-bottom: 1.5rem;
     max-width: 40ch;
     color: rgba($white, 60%);
+  }
+
+  &__sub-heading {
+    order: -1;
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  &__sub-text {
+    font-size: 0.8125rem;
+    line-height: 16.93px;
+    margin-bottom: 1.5rem;
+
+    .opaque {
+      opacity: 75%;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  &--secondary {
+
+    .hero__context {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+    }
   }
 }
 
@@ -565,5 +593,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--designed {
     object-position: top;
+  }
+
+  &--hero-stories {
+    height: 317px;
+    object-position: 70% 0%;
   }
 }
