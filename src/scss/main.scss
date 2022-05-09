@@ -41,7 +41,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   margin-inline: auto;
 
   &--secondary {
-    width: calc(100% - 4rem);
+    width: calc(100% - 3.5rem);
     margin-inline: auto;
   }
 }
@@ -139,9 +139,37 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__text {
-    margin-bottom: 1.4375rem;
+    margin-bottom: 1.5rem;
     max-width: 40ch;
     color: rgba($white, 60%);
+  }
+
+  &__description {
+    order: -1;
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  &__sub-text {
+    font-size: 0.8125rem;
+    line-height: 16.93px;
+    margin-bottom: 1.5rem;
+
+    .opaque {
+      opacity: 75%;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &--secondary {
+
+    .hero__context {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+    }
   }
 }
 
@@ -187,6 +215,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 .stories {
   color: $white;
   background-color: $black;
+
+  &--secondary {
+    color: $white;
+    background-color: $white;
+
+    .story__heading {
+      margin-top: 0;
+    }
+  }
   
   @media (min-width: 450px) {
     display: grid;
@@ -197,7 +234,31 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       ". b ."
       ". c ."
       ". d .";
+
+    &--secondary {
+      display: grid;
+      grid-template-columns: 1fr 450px 1fr;
+      grid-template-rows: repeat(16, auto);
+      grid-template-areas:
+        ". a ."
+        ". b ."
+        ". c ."
+        ". d ."
+        ". e ."
+        ". f ."
+        ". g ."
+        ". h ."
+        ". i ."
+        ". j ."
+        ". k ."
+        ". l ."
+        ". m ."
+        ". n ."
+        ". o ."
+        ". p .";
+    }  
   }
+
 }
 
 .story {
@@ -222,6 +283,54 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--d {
     grid-area: d;
+  }
+
+  &--e {
+    grid-area: e;
+  }
+
+  &--f {
+    grid-area: f;
+  }
+
+  &--g {
+    grid-area: g;
+  }
+
+  &--h {
+    grid-area: h;
+  }
+
+  &--i {
+    grid-area: i;
+  }
+
+  &--j {
+    grid-area: j;
+  }
+
+  &--k {
+    grid-area: k;
+  }
+
+  &--l {
+    grid-area: l;
+  }
+
+  &--m {
+    grid-area: m;
+  }
+
+  &--n {
+    grid-area: n;
+  }
+
+  &--o {
+    grid-area: o;
+  }
+
+  &--p {
+    grid-area: p;
   }
 
   &__slide {
@@ -269,6 +378,12 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     line-height: 16.93px;
     margin-bottom: 1rem;
   }
+
+  &__date {
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+    order: -1;
+  }
 }
 
 .slide-bg {
@@ -289,6 +404,55 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   
   &--4 {
     background-image: url(../assets/stories/desktop/architecturals.jpg);
+  }
+
+  &--5 {
+    background-image: url(../assets/stories/desktop/world-tour.jpg);
+  }
+
+  &--6 {
+    background-image: url(../assets/stories/desktop/unforeseen-corners.jpg);
+    background-position: bottom;
+  }
+
+  &--7 {
+    background-image: url(../assets/stories/desktop/king-on-africa.jpg);
+  }
+
+  &--8 {
+    background-image: url(../assets/stories/desktop/trip-to-nowhere.jpg);
+  }
+
+  &--9 {
+    background-image: url(../assets/stories/desktop/rage-of-the-sea.jpg);
+  }
+
+  &--10 {
+    background-image: url(../assets/stories/desktop/running-free.jpg);
+  }
+
+  &--11 {
+    background-image: url(../assets/stories/desktop/behind-the-waves.jpg);
+  }
+
+  &--12 {
+    background-image: url(../assets/stories/desktop/calm-waters.jpg);
+  }
+
+  &--13 {
+    background-image: url(../assets/stories/desktop/milky-way.jpg);
+  }
+
+  &--14 {
+    background-image: url(../assets/stories/desktop/dark-forest.jpg);
+  }
+
+  &--15 {
+    background-image: url(../assets/stories/desktop/somwarpet.jpg);
+  }
+
+  &--16 {
+    background-image: url(../assets/stories/desktop/land-of-dreams.jpg);
   }
 }
 
@@ -373,6 +537,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   color: $white;
   padding: 3.5rem 0;
   text-align: center;
+  position: relative;
 
   &__wrapper {
     display: flex;
@@ -532,6 +697,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     .arrow {
       margin-left: auto;
     }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   &--footer {
@@ -565,5 +735,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--designed {
     object-position: top;
+  }
+
+  &--hero-stories {
+    height: 317px;
+    object-position: 70% 0%;
   }
 }
