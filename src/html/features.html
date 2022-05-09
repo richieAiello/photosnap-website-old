@@ -15,8 +15,166 @@
 
   <title>Photosnap Website | Features</title>
 </head>
-<body>
+<body class="body">
+  <nav class="nav">
+    <div class="nav__wrapper container">
+      <img src="../assets/icons/logo-dark.svg" alt="Photosnap logo" class="logo">
+      
+      <button type="button" aria-label="Open navigation menu." class="btn btn--nav-open">
+        <img src="../assets/icons/menu.svg" alt="" class="hamburger">
+      </button>  
+      <!-- Hidden on page load. -->
+      <button type="button" aria-label="Close navigation menu." class="btn btn--nav-close hidden">
+        <img src="../assets/icons/close.svg" alt="" class="hamburger">
+      </button>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./stories.html" class="nav__link link">Stories</a>
+          </li>
+          <li class="nav__item">
+            <a href="./pricing.html" class="nav__link link">Pricing</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn--dark btn--nav">
+          get an invite
+        </button>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero__context container--secondary">
+      <h1 class="hero__heading heading">
+        Features
+      </h1>
+      <p class="hero__text">
+        We make sure all of our features are designed to be loved by every aspiring and even 
+        professional photograpers who wanted to share their stories.
+      </p>
+      <!-- Absolutely positioned accent. -->
+      <div class="accent"></div> 
+    </div> 
+
+    <!-- Displayed on mobile. -->
+    <img src="../assets/features/mobile/hero.jpg" alt="" class="image image--features image--mobile">
+    <!-- Displayed on tablet. -->
+    <img src="../assets/features/tablet/hero.jpg" alt="" class="image image--features image--tablet">
+    <!-- Displayed on desktop. -->
+    <img src="../assets/features/desktop/hero.jpg" alt="" class="image image--features image--desktop">
+  </header>
+  <main class="main">
+    <section class="features features--secondary">
+      <div class="container--secondary">
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">100% Responsive</h2>
+            <p class="feature__text">
+              No matter which the device you’re on, our site is fully responsive and stories
+              look beautiful on any screen.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/responsive.svg" alt="" class="feature__icon">
+        </div>
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">No Photo Upload Limit</h2>
+            <p class="feature__text">
+              Our tool has no limits on uploads or bandwidth. Freely upload in bulk and
+              share all of your stories in one go.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/no-limit.svg" alt="" class="feature__icon">
+        </div>
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">Available to Embed</h2>
+            <p class="feature__text">
+              Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos,
+              Google Maps, and more.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/embed.svg" alt="" class="feature__icon">
+        </div>
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">Custom Domain</h2>
+            <p class="feature__text">
+              With Photosnap subscriptions you can host your stories on your own domain. You can 
+              also remove our branding!
+            </p>
+          </div>
+          <img src="../assets/features/desktop/custom-domain.svg" alt="" class="feature__icon">
+        </div>
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">Boost Your Exposure</h2>
+            <p class="feature__text">
+              Users that viewed your story or gallery can easily get notifed of new and featured 
+              stories with our built in mailing list.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/boost-exposure.svg" alt="" class="feature__icon">
+        </div>
+        <div class="feature--secondary">
+          <div class="feature__context">
+            <h2 class="feature__heading">Drag & Drop Image</h2>
+            <p class="feature__text">
+              Easily drag and drop your image and get beautiful shots everytime. No over the top 
+              tooling to add friction to creating stories.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/drag-drop.svg" alt="" class="feature__icon">
+        </div>
+      </div>
+    </section>
+    <section class="beta">
+      <div class="beta__context container--secondary">
+        <h3 class="beta__heading heading">
+          We're in Beta.<br>
+          Get your invite<br>
+          today!
+        </h3>
+        <a href="#" class="btn btn--arrow btn--arrow-light btn--beta">
+          get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+        </a>
+        <!-- Absolutely positioned accent. -->
+        <div class="accent"></div> 
+      </div> 
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <img src="../assets/icons/logo-light.svg" alt="Photosnap logo." class="logo">
+
+      <div class="footer__icons">
+        <!-- icons inserted via index.js -->
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="./index.html" class="footer__link link">home</a>
+        </li>
+        <li class="footer__item">
+          <a href="./stories.html" class="footer__link link">stories</a>
+        </li>
+        <li class="footer__item">
+          <a href="./features.html" class="footer__link link">features</a>
+        </li>
+        <li class="footer__item">
+          <a href="./pricing.html" class="footer__link link">pricing</a>
+        </li>
+      </ul>
+
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+      </a>
   
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
 
