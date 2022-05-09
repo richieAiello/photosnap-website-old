@@ -229,110 +229,25 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   @media (min-width: 450px) {
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      ". a ."
-      ". b ."
-      ". c ."
-      ". d .";
+    grid-template-rows: repeat(4, auto);
 
     &--secondary {
       display: grid;
       grid-template-columns: 1fr 450px 1fr;
       grid-template-rows: repeat(16, auto);
-      grid-template-areas:
-        ". a ."
-        ". b ."
-        ". c ."
-        ". d ."
-        ". e ."
-        ". f ."
-        ". g ."
-        ". h ."
-        ". i ."
-        ". j ."
-        ". k ."
-        ". l ."
-        ". m ."
-        ". n ."
-        ". o ."
-        ". p .";
     }  
   }
 
 }
 
 .story {
+  grid-column: 2/3;
   height: 375px;
   width: 100%;
   margin-inline: auto;
   position: relative;
   background-color: $white;
   z-index: 0;
-
-  &--a {
-    grid-area: a;
-  }
-
-  &--b {
-    grid-area: b;
-  }
-
-  &--c {
-    grid-area: c;
-  }
-
-  &--d {
-    grid-area: d;
-  }
-
-  &--e {
-    grid-area: e;
-  }
-
-  &--f {
-    grid-area: f;
-  }
-
-  &--g {
-    grid-area: g;
-  }
-
-  &--h {
-    grid-area: h;
-  }
-
-  &--i {
-    grid-area: i;
-  }
-
-  &--j {
-    grid-area: j;
-  }
-
-  &--k {
-    grid-area: k;
-  }
-
-  &--l {
-    grid-area: l;
-  }
-
-  &--m {
-    grid-area: m;
-  }
-
-  &--n {
-    grid-area: n;
-  }
-
-  &--o {
-    grid-area: o;
-  }
-
-  &--p {
-    grid-area: p;
-  }
 
   &__slide {
     height: 375px;
