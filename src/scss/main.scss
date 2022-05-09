@@ -337,6 +337,34 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     }
   }
 }
+
+.beta {
+  background-image: url(../assets/shared/mobile/bg-beta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+  &__context {
+    padding: 4rem 0;
+    position: relative;
+
+    .accent {
+      height: 6px;
+      width: 128px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 3.33px;
+  }
+}
+
 /****************************************
   FOOTER
 ****************************************/
@@ -484,7 +512,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     margin-top: 1.25rem;
   }
 
-  &--hero {
+  &--hero,
+  &--beta {
     .arrow {
       margin-left: 1.125rem;
     }
