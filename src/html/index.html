@@ -16,34 +16,33 @@
   <title>Photosnap Website | Home</title>
 </head>
 <body class="body">
-  <nav class="nav container">
-    <img src="../assets/icons/logo.svg" alt="Photosnap logo" class="logo">
-    
-    <button type="button" aria-label="Open navigation menu." class="btn btn--nav-open">
-      <img src="../assets/icons/menu.svg" alt="" class="hamburger">
-    </button>
-
-    <!-- Hidden on page load. -->
-    <button type="button" aria-label="Close navigation menu." class="btn btn--nav-close hidden">
-      <img src="../assets/icons/close.svg" alt="" class="hamburger">
-    </button>
-
-    <div class="nav__menu">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="./stories.html" class="nav__link link">Stories</a>
-        </li>
-        <li class="nav__item">
-          <a href="./features.html" class="nav__link link">Features</a>
-        </li>
-        <li class="nav__item">
-          <a href="./pricing.html" class="nav__link link">Pricing</a>
-        </li>
-      </ul>
-
-      <button type="button" class="btn btn--dark btn--nav">
-        get an invite
+  <nav class="nav">
+    <div class="nav__wrapper container">
+      <img src="../assets/icons/logo-dark.svg" alt="Photosnap logo" class="logo">
+      
+      <button type="button" aria-label="Open navigation menu." class="btn btn--nav-open">
+        <img src="../assets/icons/menu.svg" alt="" class="hamburger">
+      </button>  
+      <!-- Hidden on page load. -->
+      <button type="button" aria-label="Close navigation menu." class="btn btn--nav-close hidden">
+        <img src="../assets/icons/close.svg" alt="" class="hamburger">
       </button>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./stories.html" class="nav__link link">Stories</a>
+          </li>
+          <li class="nav__item">
+            <a href="./features.html" class="nav__link link">Features</a>
+          </li>
+          <li class="nav__item">
+            <a href="./pricing.html" class="nav__link link">Pricing</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn--dark btn--nav">
+          get an invite
+        </button>
+      </div>
     </div>
   </nav>
   <header class="hero">
@@ -58,10 +57,10 @@
         easy to share photos, tell stories and connect with others.
       </p>
       <a href="#" class="btn btn--arrow btn--arrow-light btn--hero">
-        get an invite <img src="../assets/icons/arrow-light.svg" alt="">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
       </a>
       <!-- Absolutely positioned accent. -->
-      <div class="accent hero__accent"></div> 
+      <div class="accent"></div> 
     </div> 
 
     <!-- Displayed on mobile. -->
@@ -85,7 +84,7 @@
           with everyone.
         </p>
         <a href="./stories.html" class="btn btn--arrow btn--arrow-dark btn--view">
-          view the stories
+          view the stories <img src="../assets/icons/arrow-dark.svg" alt="" class="arrow">
         </a>
       </div>
 
@@ -108,7 +107,7 @@
           tool is designed for photographers of all levels, brands, businesses you name it.
         </p>
         <a href="./stories.html" class="btn btn--arrow btn--arrow-dark btn--view">
-          view the stories
+          view the stories <img src="../assets/icons/arrow-dark.svg" alt="" class="arrow">
         </a>
       </div>
 
@@ -120,82 +119,97 @@
       <img src="../assets/home/desktop/designed-for-everyone.jpg" alt="" class="image image--designed image--desktop">
     </section>
     <section class="stories">
-      <div class="story">
-        <div class="story__slide">
-          <h3 class="story__heading">The Mountains</h3>
-          <p class="story__text">by John Appleseed</p>
-          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
-            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
-          </a>
+      <div class="story story--a">
+        <div class="story__slide slide-bg slide-bg--1" tabindex="0">
+          <div class="story__context">
+            <h3 class="story__heading">The Mountains</h3>
+            <p class="story__text">by John Appleseed</p>
+            <a href="./stories.html" class="btn btn--arrow btn--arrow-light btn--story">
+              read story <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+            </a>
+          </div>
+          <!-- Revealed on slide hover or focus. -->
+          <div class="accent"></div>
         </div>
       </div>
-      <div class="story">
-        <div class="story__slide">
-          <h3 class="story__heading">Sunset Cityscapes</h3>
-          <p class="story__text">by Benjamin Cruz</p>
-          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
-            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
-          </a>
+      <div class="story story--b">
+        <div class="story__slide slide-bg slide-bg--2" tabindex="0">
+          <div class="story__context">
+            <h3 class="story__heading">Sunset Cityscapes</h3>
+            <p class="story__text">by Benjamin Cruz</p>
+            <a href="./stories.html" class="btn btn--arrow btn--arrow-light btn--story">
+              read story <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+            </a>
+          </div>
+          <!-- Revealed on slide hover or focus. -->
+          <div class="accent"></div>
         </div>
       </div>
-      <div class="story">
-        <div class="story__slide">
-          <h3 class="story__heading">18 Days Voyage</h3>
-          <p class="story__text">by Alexei Borodin</p>
-          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
-            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
-          </a>
+      <div class="story story--c">
+        <div class="story__slide slide-bg slide-bg--3" tabindex="0">
+          <div class="story__context">
+            <h3 class="story__heading">18 Days Voyage</h3>
+            <p class="story__text">by Alexei Borodin</p>
+            <a href="./stories.html" class="btn btn--arrow btn--arrow-light btn--story">
+              read story <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+            </a>
+          </div>
+          <!-- Revealed on slide hover or focus. -->
+          <div class="accent"></div>
         </div>
       </div>
-      <div class="story">
-        <div class="story__slide">
-          <h3 class="story__heading">Architecturals</h3>
-          <p class="story__text">by Samantha Brooke</p>
-          <a href="" class="btn btn--arrow btn--arrow-light btn--story">
-            read story <img src="../assets/icons/arrow-light.svg" alt="" class="story__arrow">
-          </a>
+      <div class="story story--d">
+        <div class="story__slide slide-bg slide-bg--4" tabindex="0">
+          <div class="story__context">
+            <h3 class="story__heading">Architecturals</h3>
+            <p class="story__text">by Samantha Brooke</p>
+            <a href="./stories.html" class="btn btn--arrow btn--arrow-light btn--story">
+              read story <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+            </a>
+          </div>
+          <!-- Revealed on slide hover or focus. -->
+          <div class="accent"></div>
         </div>
       </div>
     </section>
-    <section class="features container--secondary">
-      <div class="feature">
-        <div class="feature__context">
-          <h3 class="feature__heading">100% Responsive</h3>
-          <p class="feature__text">
-            No matter which the device you’re on, our site is fully responsive and stories 
-            look beautiful on any screen.
-          </p>
+    <section class="features">
+      <div class="container--secondary">
+        <div class="feature">
+          <div class="feature__context">
+            <h3 class="feature__heading">100% Responsive</h3>
+            <p class="feature__text">
+              No matter which the device you’re on, our site is fully responsive and stories
+              look beautiful on any screen.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/responsive.svg" alt="" class="feature__icon">
         </div>
-
-        <img src="../assets/features/desktop/responsive.svg" alt="" class="feature__icon">
-      </div>
-      <div class="feature">
-        <div class="feature__context">
-          <h3 class="feature__heading">No Photo Upload Limit</h3>
-          <p class="feature__text">
-            Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-            share all of your stories in one go.
-          </p>
+        <div class="feature">
+          <div class="feature__context">
+            <h3 class="feature__heading">No Photo Upload Limit</h3>
+            <p class="feature__text">
+              Our tool has no limits on uploads or bandwidth. Freely upload in bulk and
+              share all of your stories in one go.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/no-limit.svg" alt="" class="feature__icon">
         </div>
-
-        <img src="../assets/features/desktop/no-limit.svg" alt="" class="feature__icon">
-      </div>
-      <div class="feature">
-        <div class="feature__context">
-          <h3 class="feature__heading">Available to Embed</h3>
-          <p class="feature__text">
-            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-            Google Maps, and more.
-          </p>
+        <div class="feature">
+          <div class="feature__context">
+            <h3 class="feature__heading">Available to Embed</h3>
+            <p class="feature__text">
+              Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos,
+              Google Maps, and more.
+            </p>
+          </div>
+          <img src="../assets/features/desktop/embed.svg" alt="" class="feature__icon">
         </div>
-
-        <img src="../assets/features/desktop/embed.svg" alt="" class="feature__icon"> 
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">
-      <img src="../assets/icons/logo.svg" alt="Photosnap logo." class="logo">
+      <img src="../assets/icons/logo-light.svg" alt="Photosnap logo." class="logo">
 
       <div class="footer__icons">
         <!-- icons inserted via index.js -->
@@ -214,14 +228,14 @@
         <li class="footer__item">
           <a href="./pricing.html" class="footer__link link">pricing</a>
         </li>
-      </ul> 
+      </ul>
+
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+      </a>
+  
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
     </div>
-
-    <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
-      get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="footer__arrow">
-    </a>
-
-    <p class="copyright">Copyright 2019. All Rights Reserved</p>
   </footer>
 </body>
 </html>
