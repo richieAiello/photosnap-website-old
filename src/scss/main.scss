@@ -114,6 +114,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   background-color: $black;
   width: 20px;
   height: 2px;
+  border-radius: 1rem;
   transition: all 500ms;
   position: absolute;
   left: 0;
@@ -616,8 +617,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--hamburger {
     position: relative;
-    height: 16px;
-    width: 20px;
+    height: 1rem;
+    width: 1.25rem;
+
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: #6f6f6f;
+      }
+    }
   }
 
   &--nav {
@@ -692,4 +700,35 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   &--designed {
     object-position: top;
   }
+}
+
+/****************************************
+  KEYFRAMES
+****************************************/
+@keyframes slide-in {
+  from {
+    transform: translateX(-100vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.slide-in {
+  animation: slide-in 500ms backwards;
+}
+
+.slide-out {
+  animation: slide-out 500ms forwards;
 }

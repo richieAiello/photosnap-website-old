@@ -17,13 +17,45 @@ export const iconContainer = document.querySelector('.footer__icons');
 // Inserts inline svgs into html to clear up html files and for styling.
 insertIcons();
 
+const navShow = () => {
+
+  setTimeout(() => {
+    navMenu.classList.remove('slide-in');
+    hamburgerBtn.removeAttribute('disabled');
+  }, 500);
+
+  hamburgerBtn.setAttribute('disabled', 'true');
+
+  hamburgerTop.classList.add('flip-top');
+  hamburgerBottom.classList.add('flip-bottom');
+
+  navMenu.classList.add('slide-in')
+  navMenu.classList.remove('hidden')
+}
+
+const navHide = () => {
+
+  setTimeout(() => {
+    navMenu.classList.add('hidden');
+    navMenu.classList.remove('slide-out');
+    hamburgerBtn.removeAttribute('disabled');
+  }, 500);
+
+  hamburgerBtn.setAttribute('disabled', 'true');
+
+  hamburgerTop.classList.remove('flip-top');
+  hamburgerBottom.classList.remove('flip-bottom');
+
+  navMenu.classList.add('slide-out');
+}
+
 /********************************************
   EVENT LISTENERS
 ********************************************/
 hamburgerBtn.addEventListener('click', e => {
-  hamburgerTop.classList.toggle('flip-top');
-  hamburgerBottom.classList.toggle('flip-bottom');
-  navMenu.classList.toggle('hidden');
+  navMenu.classList.contains('hidden') ?
+  navShow() : 
+  navHide();
 });
 
 // Reference article to main a div clickable and follow a link
