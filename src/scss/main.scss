@@ -56,6 +56,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 // Placed below btn resets to not interfer with display toggling
+// Display: unset || on tablet and desktop
 .hidden {
   display: none;
 }
@@ -76,7 +77,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__menu {
-    display: none;
     width: 100%;
     background-color: $white;
     padding: 2rem;
@@ -107,6 +107,36 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       color: rgba($black, 30%);
     }
   }
+}
+
+// Absolutely positioned to btn--hamburger.
+.hamburger {
+  background-color: $black;
+  width: 20px;
+  height: 2px;
+  transition: all 500ms;
+  position: absolute;
+  left: 0;
+
+  &--top {
+    top:  3px;
+  }
+
+  &--bottom {
+    bottom: 3px;
+  }
+}
+
+// Toggled on click for .hamburger--top
+.flip-top {
+  top: 7px;
+  transform: rotate(-225deg);
+}
+
+// Toggled on click for .hamburger--bottom
+.flip-bottom {
+  bottom: 7px;
+  transform: rotate(-315deg);
 }
 
 /****************************************
@@ -140,7 +170,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__text {
-    margin-bottom: 1.5rem;
     max-width: 40ch;
     color: rgba($white, 60%);
   }
@@ -585,6 +614,12 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     color: $black;
   }
 
+  &--hamburger {
+    position: relative;
+    height: 16px;
+    width: 20px;
+  }
+
   &--nav {
     width: 100%;
     font-size: 0.9375rem;
@@ -592,6 +627,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     letter-spacing: 2.5px;
     padding: 0.875rem 0;
     margin-top: 1.25rem;
+  }
+
+  &--hero {
+    margin-top: 1.5rem;
   }
 
   &--hero,

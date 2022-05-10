@@ -1,8 +1,9 @@
 import { insertIcons } from "./insertSvgs";
 
 // Variables for nav.
-const navOpen = document.querySelector('.btn--nav-open');
-const navClose = document.querySelector('.btn--nav-close');
+const hamburgerBtn = document.querySelector('.btn--hamburger');
+const hamburgerTop = document.querySelector('.hamburger--top');
+const hamburgerBottom = document.querySelector('.hamburger--bottom');
 const navMenu = document.querySelector('.nav__menu');
 
 // Variables for story slides.
@@ -19,16 +20,10 @@ insertIcons();
 /********************************************
   EVENT LISTENERS
 ********************************************/
-navOpen.addEventListener('click', e => {
-  navMenu.style.display = "block";
-  navOpen.classList.toggle('hidden');
-  navClose.classList.toggle('hidden');
-});
-
-navClose.addEventListener('click', e => {
-  navMenu.style.display = "none";
-  navOpen.classList.toggle('hidden');
-  navClose.classList.toggle('hidden');
+hamburgerBtn.addEventListener('click', e => {
+  hamburgerTop.classList.toggle('flip-top');
+  hamburgerBottom.classList.toggle('flip-bottom');
+  navMenu.classList.toggle('hidden');
 });
 
 // Reference article to main a div clickable and follow a link
