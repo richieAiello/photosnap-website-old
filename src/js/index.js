@@ -16,6 +16,10 @@ const purchaseBtn = document.querySelector('.btn--pricing');
 const purchaseThumb = document.querySelector('.purchase__thumb');
 const headingMonthly = document.querySelector('.monthly');
 const headingYearly = document.querySelector('.yearly');
+const planPriceBasic = document.querySelector('.plan__price--basic');
+const planPricePro = document.querySelector('.plan__price--pro');
+const planPriceBusiness = document.querySelector('.plan__price--business');
+const planPriceText = document.querySelectorAll('.plan__price-text');
 
 // Footer icon container
 export const iconContainer = document.querySelector('.footer__icons');
@@ -61,6 +65,12 @@ const monthlyOptions = () => {
   purchaseThumb.classList.add('monthly__thumb');
   headingMonthly.style.opacity = '100%';
   headingYearly.style.opacity = '50%';
+
+  planPriceBasic.textContent = '$19.00';
+  planPricePro.textContent = '$39.00';
+  planPriceBusiness.textContent = '$99.00';
+
+  planPriceText.forEach(price => price.textContent = 'per month');
 }
 
 const yearlyOptions = () => {
@@ -69,6 +79,12 @@ const yearlyOptions = () => {
   purchaseThumb.classList.add('yearly__thumb');
   headingYearly.style.opacity = '100%';
   headingMonthly.style.opacity = '50%';
+
+  planPriceBasic.textContent = '$190.00';
+  planPricePro.textContent = '$390.00';
+  planPriceBusiness.textContent = '$990.00';
+
+  planPriceText.forEach(price => price.textContent = 'per year');
 }
 
 /********************************************
