@@ -448,6 +448,66 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+// Main section purchase
+.purchase {
+  padding: 4rem 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-inline: auto;
+  }
+
+  &__heading {
+    font-size: 1.125rem;
+    // line-height: 1.5625rem;
+  }
+
+  &__track,
+  &__thumb {
+    display: inline-block;
+    transition: all 400ms;
+  }
+
+  &__track {
+    width: 64px;
+    height: 32px;
+    border-radius: 1rem;
+    background-color: $grey;
+  }
+
+  &__thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $black;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.monthly {
+  color: rgba($black, 100%);
+
+  &__thumb {
+    transform: translateX(-16px);
+  }
+}
+
+.yearly {
+  color: rgba($black, 50%);
+
+  &__thumb {
+    transform: translateX(16px);
+  }
+}
+
+// Main section beta
 .beta {
   background-image: url(../assets/shared/mobile/bg-beta.jpg);
   background-repeat: no-repeat;
@@ -665,6 +725,24 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     &:hover,
     &:focus {
       text-decoration: none;
+    }
+  }
+
+  &--pricing {
+    display: flex;
+    align-items: center;
+    margin-inline: 2rem;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      .purchase__track {
+        background-color: $black;
+      }
+
+      .purchase__thumb {
+        background-color: $white;
+      }
     }
   }
 
