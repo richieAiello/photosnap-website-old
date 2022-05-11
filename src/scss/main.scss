@@ -457,6 +457,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     align-items: center;
     width: max-content;
     margin-inline: auto;
+    margin-bottom: 2.5rem;
+
+    // &--secondary {
+      
+    // }
   }
 
   &__heading {
@@ -503,7 +508,58 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   opacity: 50%;
 
   &__thumb {
-    transform: translateX(16px);
+    transform: translateX(16px); 
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+
+  &--primary {
+    background-color: #F5F5F5;
+    color: $black;
+  }
+
+  &--secondary {
+    background-color: $black;
+    color: $white; 
+    margin: 1.5rem 0;
+    position: relative;
+
+    .accent {
+      height: 6px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.125rem;
+  }
+
+  &__text {
+    opacity: 60%;
+    max-width: 35ch;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 4.17px;
+  }
+
+  &__price-text {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -744,6 +800,14 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
         background-color: $white;
       }
     }
+  }
+
+  &--plan {
+    width: min(100%, 245px);
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    padding: 0.75rem 0;
   }
 
   &--footer {
