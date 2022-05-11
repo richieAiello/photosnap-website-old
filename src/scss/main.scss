@@ -867,10 +867,24 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
 .slide-in {
   animation: slide-in 500ms backwards;
 }
 
 .slide-out {
   animation: slide-out 500ms forwards;
+}
+
+.fade {
+  animation: fade 500ms backwards;
 }

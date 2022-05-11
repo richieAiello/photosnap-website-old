@@ -16,10 +16,14 @@ const purchaseBtn = document.querySelector('.btn--pricing');
 const purchaseThumb = document.querySelector('.purchase__thumb');
 const headingMonthly = document.querySelector('.monthly');
 const headingYearly = document.querySelector('.yearly');
+
+// Varibles for plan price and text
+const planPrice = [...document.querySelectorAll('.plan__price')];
+const planPriceText = [...document.querySelectorAll('.plan__price-text')];
+const planList = [...planPrice, ...planPriceText];
 const planPriceBasic = document.querySelector('.plan__price--basic');
 const planPricePro = document.querySelector('.plan__price--pro');
 const planPriceBusiness = document.querySelector('.plan__price--business');
-const planPriceText = document.querySelectorAll('.plan__price-text');
 
 // Footer icon container
 export const iconContainer = document.querySelector('.footer__icons');
@@ -70,7 +74,8 @@ const monthlyOptions = () => {
   planPricePro.textContent = '$39.00';
   planPriceBusiness.textContent = '$99.00';
 
-  planPriceText.forEach(price => price.textContent = 'per month');
+  planList.forEach(item => item.classList.add('fade'));
+  planPriceText.forEach(text => text.textContent = 'per month');
 }
 
 const yearlyOptions = () => {
@@ -84,7 +89,8 @@ const yearlyOptions = () => {
   planPricePro.textContent = '$390.00';
   planPriceBusiness.textContent = '$990.00';
 
-  planPriceText.forEach(price => price.textContent = 'per year');
+  planList.forEach(item => item.classList.add('fade'));
+  planPriceText.forEach(text => text.textContent = 'per year');
 }
 
 /********************************************
@@ -110,8 +116,19 @@ storySlides.forEach(slide => {
 });
 
 purchaseBtn.addEventListener('click', e => {
+  setTimeout(() => {
+    purchaseBtn.removeAttribute('disabled');
+  }, 500);
+
+  purchaseBtn.setAttribute('disabled', 'true');
 
   purchaseThumb.classList.contains('monthly__thumb') ?
   yearlyOptions() :
   monthlyOptions()
+});
+
+planList.forEach(item => {
+  item.addEventListener('animationend', e => {
+    e.currentTarget.classList.remove('fade');
+  })
 });
