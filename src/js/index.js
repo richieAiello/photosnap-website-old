@@ -11,6 +11,12 @@ const navMenu = document.querySelector('.nav__menu');
 const storySlides = [...document.querySelectorAll('.story__slide')];
 const storyBtns = [...document.querySelectorAll('.btn--story')];
 
+// Variables for purchase button
+const purchaseBtn = document.querySelector('.btn--pricing');
+const purchaseThumb = document.querySelector('.purchase__thumb');
+const headingMonthly = document.querySelector('.monthly');
+const headingYearly = document.querySelector('.yearly');
+
 // Footer icon container
 export const iconContainer = document.querySelector('.footer__icons');
 
@@ -49,6 +55,22 @@ const navHide = () => {
   navMenu.classList.add('slide-out');
 }
 
+const monthlyOptions = () => {
+
+  purchaseThumb.classList.remove('yearly__thumb');
+  purchaseThumb.classList.add('monthly__thumb');
+  headingMonthly.style.opacity = '100%';
+  headingYearly.style.opacity = '50%';
+}
+
+const yearlyOptions = () => {
+
+  purchaseThumb.classList.remove('monthly__thumb');
+  purchaseThumb.classList.add('yearly__thumb');
+  headingYearly.style.opacity = '100%';
+  headingMonthly.style.opacity = '50%';
+}
+
 /********************************************
   EVENT LISTENERS
 ********************************************/
@@ -69,4 +91,11 @@ storySlides.forEach(slide => {
     const btn = storyBtns[storySlides.indexOf(e.currentTarget)];
     btn.click();
   });
+});
+
+purchaseBtn.addEventListener('click', e => {
+
+  purchaseThumb.classList.contains('monthly__thumb') ?
+  yearlyOptions() :
+  monthlyOptions()
 });

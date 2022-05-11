@@ -461,6 +461,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &__heading {
     font-size: 1.125rem;
+    transition: all 400ms;
     // line-height: 1.5625rem;
   }
 
@@ -492,7 +493,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 .monthly {
-  color: rgba($black, 100%);
 
   &__thumb {
     transform: translateX(-16px);
@@ -500,7 +500,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 .yearly {
-  color: rgba($black, 50%);
+  opacity: 50%;
 
   &__thumb {
     transform: translateX(16px);
