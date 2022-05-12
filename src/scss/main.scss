@@ -56,6 +56,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 // Placed below btn resets to not interfer with display toggling
+// Display: unset || on tablet and desktop
 .hidden {
   display: none;
 }
@@ -76,13 +77,13 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__menu {
-    display: none;
     width: 100%;
     background-color: $white;
     padding: 2rem;
     position: absolute;
     left: 0;
     top: 70px;
+    z-index: 1;
   }
 
   &__list {
@@ -106,6 +107,37 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       color: rgba($black, 30%);
     }
   }
+}
+
+// Absolutely positioned to btn--hamburger.
+.hamburger {
+  background-color: $black;
+  width: 20px;
+  height: 2px;
+  border-radius: 1rem;
+  transition: all 500ms;
+  position: absolute;
+  left: 0;
+
+  &--top {
+    top:  3px;
+  }
+
+  &--bottom {
+    bottom: 3px;
+  }
+}
+
+// Toggled on click for .hamburger--top
+.flip-top {
+  top: 7px;
+  transform: rotate(-225deg);
+}
+
+// Toggled on click for .hamburger--bottom
+.flip-bottom {
+  bottom: 7px;
+  transform: rotate(-315deg);
 }
 
 /****************************************
@@ -139,7 +171,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &__text {
-    margin-bottom: 1.5rem;
     max-width: 40ch;
     color: rgba($white, 60%);
   }
@@ -228,110 +259,25 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   @media (min-width: 450px) {
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      ". a ."
-      ". b ."
-      ". c ."
-      ". d .";
+    grid-template-rows: repeat(4, auto);
 
     &--secondary {
       display: grid;
       grid-template-columns: 1fr 450px 1fr;
       grid-template-rows: repeat(16, auto);
-      grid-template-areas:
-        ". a ."
-        ". b ."
-        ". c ."
-        ". d ."
-        ". e ."
-        ". f ."
-        ". g ."
-        ". h ."
-        ". i ."
-        ". j ."
-        ". k ."
-        ". l ."
-        ". m ."
-        ". n ."
-        ". o ."
-        ". p .";
     }  
   }
 
 }
 
 .story {
+  grid-column: 2/3;
   height: 375px;
   width: 100%;
   margin-inline: auto;
   position: relative;
   background-color: $white;
   z-index: 0;
-
-  &--a {
-    grid-area: a;
-  }
-
-  &--b {
-    grid-area: b;
-  }
-
-  &--c {
-    grid-area: c;
-  }
-
-  &--d {
-    grid-area: d;
-  }
-
-  &--e {
-    grid-area: e;
-  }
-
-  &--f {
-    grid-area: f;
-  }
-
-  &--g {
-    grid-area: g;
-  }
-
-  &--h {
-    grid-area: h;
-  }
-
-  &--i {
-    grid-area: i;
-  }
-
-  &--j {
-    grid-area: j;
-  }
-
-  &--k {
-    grid-area: k;
-  }
-
-  &--l {
-    grid-area: l;
-  }
-
-  &--m {
-    grid-area: m;
-  }
-
-  &--n {
-    grid-area: n;
-  }
-
-  &--o {
-    grid-area: o;
-  }
-
-  &--p {
-    grid-area: p;
-  }
 
   &__slide {
     height: 375px;
@@ -460,7 +406,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   background-color: $white;
   padding: 5rem 0;
   text-align: center;
-  // Allows overlapping of slide accents.
+  // Allows overlapping of slide accents in index.html.
   position: relative;
 }
 
@@ -502,6 +448,196 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+// Main section purchase
+.purchase {
+  padding: 4rem 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+
+    // &--secondary {
+      
+    // }
+  }
+
+  &__heading {
+    font-size: 1.125rem;
+    transition: all 400ms;
+    // line-height: 1.5625rem;
+  }
+
+  &__track,
+  &__thumb {
+    display: inline-block;
+    transition: all 400ms;
+  }
+
+  &__track {
+    width: 64px;
+    height: 32px;
+    border-radius: 1rem;
+    background-color: $grey;
+  }
+
+  &__thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $black;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.monthly {
+
+  &__thumb {
+    transform: translateX(-16px);
+  }
+}
+
+.yearly {
+  opacity: 50%;
+
+  &__thumb {
+    transform: translateX(16px); 
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+
+  &--primary {
+    background-color: #F5F5F5;
+    color: $black;
+  }
+
+  &--secondary {
+    background-color: $black;
+    color: $white; 
+    margin: 1.5rem 0;
+    position: relative;
+
+    .accent {
+      height: 6px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.125rem;
+  }
+
+  &__text {
+    opacity: 60%;
+    max-width: 35ch;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 4.17px;
+  }
+
+  &__price-text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// Main section secifications
+.compare {
+  padding-bottom: 4rem;
+}
+
+// Hide specifics__label on larger screens
+.specifics {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+
+  &__heading {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &--secondary {
+      text-align: center;
+    }
+
+    &--body {
+      grid-column: 1/-1;
+      grid-row: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 1.5rem 0;
+
+    &:first-of-type {
+      border-top: 1px solid $black;
+      margin-top: 1.5rem;
+    }
+  }
+  
+  &__data {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 13.02px;
+    letter-spacing: 1.67px;
+    opacity: 50%;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// invisible properties get unset on larger screens
+// inviisible--data always remains the same
+.invisible,
+.invisible--data {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+// Main section beta
 .beta {
   background-image: url(../assets/shared/mobile/bg-beta.jpg);
   background-repeat: no-repeat;
@@ -537,6 +673,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   color: $white;
   padding: 3.5rem 0;
   text-align: center;
+  // Allows overlapping of slide accents in stories.html.
   position: relative;
 
   &__wrapper {
@@ -668,6 +805,19 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     color: $black;
   }
 
+  &--hamburger {
+    position: relative;
+    height: 1rem;
+    width: 1.25rem;
+
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: #6f6f6f;
+      }
+    }
+  }
+
   &--nav {
     width: 100%;
     font-size: 0.9375rem;
@@ -675,6 +825,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     letter-spacing: 2.5px;
     padding: 0.875rem 0;
     margin-top: 1.25rem;
+  }
+
+  &--hero {
+    margin-top: 1.5rem;
   }
 
   &--hero,
@@ -704,6 +858,32 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     }
   }
 
+  &--pricing {
+    display: flex;
+    align-items: center;
+    margin-inline: 2rem;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      .purchase__track {
+        background-color: $black;
+      }
+
+      .purchase__thumb {
+        background-color: $white;
+      }
+    }
+  }
+
+  &--plan {
+    width: min(100%, 245px);
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    padding: 0.75rem 0;
+  }
+
   &--footer {
     .arrow {
       margin-left: 1.375rem;
@@ -723,7 +903,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     display: none;
   }
 
-  &--create {
+  &--hero {
     object-position: top;
     height: 294px;
   }
@@ -736,9 +916,49 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   &--designed {
     object-position: top;
   }
+}
 
-  &--hero-stories {
-    height: 317px;
-    object-position: 70% 0%;
+/****************************************
+  KEYFRAMES
+****************************************/
+@keyframes slide-in {
+  from {
+    transform: translateX(-100vw);
   }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.slide-in {
+  animation: slide-in 500ms backwards;
+}
+
+.slide-out {
+  animation: slide-out 500ms forwards;
+}
+
+.fade {
+  animation: fade 500ms backwards;
 }

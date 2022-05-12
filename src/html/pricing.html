@@ -15,70 +15,323 @@
 
   <title>Photosnap Website | Pricing</title>
 </head>
-<body>
+<body class="body">
+  <nav class="nav">
+    <div class="nav__wrapper container">
+      <img src="../assets/icons/logo-dark.svg" alt="Photosnap logo" class="logo">
+
+      <!-- Displayed on mobile. -->
+      <button type="button" aria-label="Open and close navigation menu." class="btn btn--hamburger">
+        <span class="hamburger hamburger--top"></span>
+        <span class="hamburger hamburger--bottom"></span>
+      </button>
+
+      <!-- Hidden on mobile. -->
+      <div class="nav__menu hidden">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./stories.html" class="nav__link link">Stories</a>
+          </li>
+          <li class="nav__item">
+            <a href="./features.html" class="nav__link link">Features</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn--dark btn--nav">
+          get an invite
+        </button>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero__context container--secondary">
+      <h1 class="hero__heading heading">
+        Pricing
+      </h1>
+      <p class="hero__text">
+        Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
+        It’s the simple way to create and share your photos.
+      </p>
+      <!-- Absolutely positioned accent. -->
+      <div class="accent"></div> 
+    </div> 
+
+    <!-- Displayed on mobile. -->
+    <img src="../assets/pricing/mobile/hero.jpg" alt="" class="image image--hero image--mobile">
+    <!-- Displayed on tablet. -->
+    <img src="../assets/pricing/tablet/hero.jpg" alt="" class="image image--hero image--tablet">
+    <!-- Displayed on desktop. -->
+    <img src="../assets/pricing/desktop/hero.jpg" alt="" class="image image--hero image--desktop">
+  </header>
+  <main class="main">
+    <section class="purchase container--secondary">
+      <div class="purchase__wrapper">
+        <h2 class="purchase__heading monthly">Monthly</h2>
+        <button type="button" 
+          aria-label="Swap between monthly and yearly plan options. Monthly selected by default."
+          class="btn btn--pricing"
+        >
+          <span class="purchase__track"></span>
+          <span class="purchase__thumb monthly__thumb"></span>
+        </button>
+        <h2 class="purchase__heading yearly">Yearly</h2>
+      </div>
+      <div class="purchase__wrapper--secondary">
+        <div class="plan plan--primary">
+          <h3 class="plan__heading">Basic</h3>
+          <p class="plan__text">
+            Includes basic usage of our platform.
+            Recommended for new and aspiring photographers.
+          </p>
+          <!-- $190.00 per year -->
+          <p class="plan__price plan__price--basic">$19.00</p>
+          <p class="plan__price-text">per month</p>
+          <a href="#" class="btn btn--dark btn--plan">
+            pick plan
+          </a>
+        </div>
+        <div class="plan plan--secondary">
+          <h3 class="plan__heading">Pro</h3>
+          <p class="plan__text">
+            More advanced features available.
+            Recommended for photography veterans and professionals.
+          </p>
+          <!-- $390.00 per year -->
+          <p class="plan__price plan__price--pro">$39.00</p>
+          <p class="plan__price-text">per month</p>
+          <a href="#" class="btn btn--light btn--plan">
+            pick plan
+          </a>
+          <div class="accent"></div>
+        </div>
+        <div class="plan plan--primary">
+          <h3 class="plan__heading">Business</h3>
+          <p class="plan__text">
+            Additional features available such as more detailed metrics.
+            Recommended for business owners.
+          </p>
+          <!-- $990.00 per year -->
+          <p class="plan__price plan__price--business">$99.00</p>
+          <p class="plan__price-text">per month</p>
+          <a href="#" class="btn btn--dark btn--plan">
+            pick plan
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="compare container--secondary">
+      <h2 class="compare__heading heading invisible">compare</h2>
+      <table class="specifics">
+        <thead>
+          <tr>
+            <th class="specifics__heading"
+              scope="col" colspan="1"
+            >
+              the features
+            </th>
+            <th class="specifics__heading specifics__heading--secondary invisible"
+              scope="col" colspan="1"
+            >
+              basic
+            </th>
+            <th class="specifics__heading specifics__heading--secondary invisible"
+              scope="col" colspan="1"
+            >
+              pro
+            </th>
+            <th class="specifics__heading specifics__heading--secondary invisible"
+              scope="col" colspan="1"
+            >
+              business
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Unlimited Story Posting
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <img src="../assets/icons/check.svg" alt="Basic plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <img src="../assets/icons/check.svg" alt="Pro plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Unlimited Photo Upload
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <img src="../assets/icons/check.svg" alt="Basic plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <img src="../assets/icons/check.svg" alt="Pro plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Embedding Custom Content
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <img src="../assets/icons/check.svg" alt="Pro plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Customize Metadata
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <img src="../assets/icons/check.svg" alt="Pro plan contains this feature.">
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Advanced Metrics
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <span class="invisible--data">Pro plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Photo Downloads
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <span class="invisible--data">Pro plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Search Engine Indexing
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <span class="invisible--data">Pro plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+          <tr class="specifics__row">
+            <th class="specifics__heading specifics__heading--body" scope="row" colspan="1">
+              Custom Analytics
+            </th>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Basic</span>
+              <span class="invisible--data">Basic plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Pro</span>
+              <span class="invisible--data">Pro plan does not contain this feature.</span>
+            </td>
+            <td class="specifics__data" colspan="1">
+              <span class="specifics__label" aria-hidden="true">Business</span>
+              <img src="../assets/icons/check.svg" alt="Business plan contains this feature.">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="beta">
+      <div class="beta__context container--secondary">
+        <h2 class="beta__heading heading">
+          We're in Beta.<br>
+          Get your invite<br>
+          today!
+        </h2>
+        <a href="#" class="btn btn--arrow btn--arrow-light btn--beta">
+          get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+        </a>
+        <!-- Absolutely positioned accent. -->
+        <div class="accent"></div> 
+      </div> 
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <img src="../assets/icons/logo-light.svg" alt="Photosnap logo." class="logo">
+
+      <div class="footer__icons">
+        <!-- icons inserted via index.js -->
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="./index.html" class="footer__link link">home</a>
+        </li>
+        <li class="footer__item">
+          <a href="./stories.html" class="footer__link link">stories</a>
+        </li>
+        <li class="footer__item">
+          <a href="./features.html" class="footer__link link">features</a>
+        </li>
+        <li class="footer__item">
+          <a href="./pricing.html" class="footer__link link">pricing</a>
+        </li>
+      </ul>
+
+      <a href="#" class="btn btn--arrow btn--arrow-light btn--footer">
+        get an invite <img src="../assets/icons/arrow-light.svg" alt="" class="arrow">
+      </a>
   
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
-
-<!-- 
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Pricing
-
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
-
-  Monthly
-  Yearly
-
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
-
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
-
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
-
-  Compare
-
-  The Features
-
-  Basic
-  Pro
-  Business
-
-  Unlimited Story Posting
-  Unlimited Photo Upload
-  Embedding Custom Content
-  Customize Metadata
-  Advanced Metrics
-  Photo Downloads
-  Search Engine Indexing
-  Custom Analytics
-
-  We're in Beta. Get your invite today!
-  
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved -->
