@@ -107,7 +107,7 @@ hamburgerBtn.addEventListener('click', e => {
 // Loops through storySlides array and adds click events to each slide.
 // Every part of the slide becomes interactive and clickable.
 // When the slide is clicked it's corresponding link is clicked.
-storySlides.forEach(slide => {
+storySlides?.forEach(slide => {
 
   slide.addEventListener('click', e => {
     const btn = storyBtns[storySlides.indexOf(e.currentTarget)];
@@ -115,7 +115,7 @@ storySlides.forEach(slide => {
   });
 });
 
-purchaseBtn.addEventListener('click', e => {
+purchaseBtn?.addEventListener('click', e => {
   setTimeout(() => {
     purchaseBtn.removeAttribute('disabled');
   }, 500);
@@ -127,7 +127,7 @@ purchaseBtn.addEventListener('click', e => {
   monthlyOptions()
 });
 
-planList.forEach(item => {
+planList?.forEach(item => {
   item.addEventListener('animationend', e => {
     e.currentTarget.classList.remove('fade');
   })

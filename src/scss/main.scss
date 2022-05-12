@@ -563,6 +563,80 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+// Main section secifications
+.compare {
+  padding-bottom: 4rem;
+}
+
+// Hide specifics__label on larger screens
+.specifics {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+
+  &__heading {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &--secondary {
+      text-align: center;
+    }
+
+    &--body {
+      grid-column: 1/-1;
+      grid-row: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 1.5rem 0;
+
+    &:first-of-type {
+      border-top: 1px solid $black;
+      margin-top: 1.5rem;
+    }
+  }
+  
+  &__data {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 13.02px;
+    letter-spacing: 1.67px;
+    opacity: 50%;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// invisible properties get unset on larger screens
+// inviisible--data always remains the same
+.invisible,
+.invisible--data {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+}
+
 // Main section beta
 .beta {
   background-image: url(../assets/shared/mobile/bg-beta.jpg);
