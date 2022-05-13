@@ -552,23 +552,25 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 @media (min-width: 768px) {
+  .stories .stories__wrapper,
+  .stories--secondary {
+    max-width: 840px;
+    margin-inline: auto;
+    grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
+  }
+
   .stories {
     &__wrapper {
-      max-width: 840px;
-      grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
       grid-template-rows: repeat(2, 1fr);
-      margin-inline: auto;
     }
-    // &--secondary {
-    //   grid-template-columns: 1fr 450px 1fr;
-    //   grid-template-rows: repeat(16, auto);
-    // }  
+
+    &--secondary {
+      grid-template-rows: repeat(8, 1fr);
+    }  
   }
 
   .story {
     grid-column: unset;
-    // grid-column: 2/4;
-    // grid-row: 1/-1;
     height: 500px;
 
     &__context {
