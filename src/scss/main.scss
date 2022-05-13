@@ -176,7 +176,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 /****************************************
   HERO
 ****************************************/
-.hero {
+.hero,
+.hero--secondary {
   display: flex;
   flex-direction: column;
   background-color: $black;
@@ -211,6 +212,18 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     &--stories {
       margin-bottom: 1.5rem; 
     }
+
+    &--stories {
+      max-width: 38ch;
+    }
+  }
+
+  &--secondary {
+    .hero__context {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+    }
   }
 
   &__description {
@@ -229,15 +242,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     .opaque {
       opacity: 75%;
       margin-right: 0.5rem;
-    }
-  }
-
-  &--secondary {
-
-    .hero__context {
-      display: flex;
-      flex-direction: column;
-      padding: 3rem 0;
     }
   }
 }
@@ -275,34 +279,25 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     &__text--home {
       margin-bottom: 3rem;
     }
-  
-    // &__description {
-    //   order: -1;
-    //   font-size: 0.75rem;
-    //   line-height: 15.62px;
-    //   letter-spacing: 2px;
-    //   margin-bottom: 1rem;
-    // }
-  
-    // &__sub-text {
-    //   font-size: 0.8125rem;
-    //   line-height: 16.93px;
-    //   margin-bottom: 1.5rem;
-  
-    //   .opaque {
-    //     opacity: 75%;
-    //     margin-right: 0.5rem;
-    //   }
-    // }
-  
-    // &--secondary {
-  
-    //   .hero__context {
-    //     display: flex;
-    //     flex-direction: column;
-    //     padding: 3rem 0;
-    //   }
-    // }
+
+    &--secondary {
+      position: relative;
+
+      .hero__context {
+        height: max-content;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .hero__heading {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 }
 
@@ -1185,6 +1180,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     height: 294px;
   }
 
+  &--hero-stories {
+    height: 317px;
+    object-position: 65% 0%;
+  }
+
   &--beautiful,
   &--designed {
     height: 271px;
@@ -1195,6 +1195,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   @media (min-width: 768px) {
+    &--hero-stories {
+      height: 650px;
+      object-position: 65% 0%;
+    }
+
     &--hero,
     &--beautiful,
     &--designed {
