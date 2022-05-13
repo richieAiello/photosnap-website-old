@@ -250,7 +250,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   .hero {
     display: grid;
     grid-template-columns: 1fr 495px 273px 1fr;
-    grid-template-rows: 650px;
+    grid-template-rows: auto;
 
     .container--secondary {
       width: unset;
@@ -1178,13 +1178,24 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &--hero {
-    object-position: 50% 35%;
     height: 294px;
-  }
 
-  &--hero-stories {
-    height: 317px;
-    object-position: 65% 0%;
+    &-home {
+      object-position: 50% 35%;
+    }
+
+    &-stories {
+      height: 317px;
+      object-position: 65% 0%;
+    }
+
+    &-features {
+      object-position: left;
+    }
+
+    &-pricing {
+      object-position: top;
+    }
   }
 
   &--beautiful,
@@ -1197,19 +1208,31 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   @media (min-width: 768px) {
-    &--hero-stories {
-      height: 650px;
-      object-position: 65% 0%;
+    &--hero {
+      grid-column: 3/-1;
+
+      &-home {
+        height: 650px ;
+        object-position: center;
+      }
+
+      &-features,
+      &-pricing {
+        height: 490px;
+      }
+
+      &-stories {
+        height: 650px;
+        object-position: 65% 0%;
+      }
     }
 
-    &--hero,
     &--beautiful,
     &--designed {
       height: 100%;
       width: 100%;
     }
 
-    &--hero,
     &--designed {
       object-position: center;
       grid-column: 3/-1; 
