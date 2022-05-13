@@ -245,29 +245,16 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 .stories {
   color: $white;
-  background-color: $black;
 
   &--secondary {
     color: $white;
-    background-color: $white;
 
     .story__heading {
       margin-top: 0;
     }
   }
   
-  @media (min-width: 450px) {
-    display: grid;
-    grid-template-columns: 1fr 450px 1fr;
-    grid-template-rows: repeat(4, auto);
-
-    &--secondary {
-      display: grid;
-      grid-template-columns: 1fr 450px 1fr;
-      grid-template-rows: repeat(16, auto);
-    }  
-  }
-
+  
 }
 
 .story {
@@ -280,7 +267,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   z-index: 0;
 
   &__slide {
-    height: 375px;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 1;
@@ -402,6 +389,46 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@media (min-width: 400px) {
+  .stories {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: repeat(4, auto);
+
+    &--secondary {
+      display: grid;
+      grid-template-columns: 1fr 400px 1fr;
+      grid-template-rows: repeat(16, auto);
+    }  
+  }
+}
+
+@media (min-width: 768px) {
+  .stories {
+    max-width: 840px;
+    grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
+    grid-template-rows: repeat(2, 1fr);
+    margin-inline: auto;
+
+    // &--secondary {
+    //   grid-template-columns: 1fr 450px 1fr;
+    //   grid-template-rows: repeat(16, auto);
+    // }  
+  }
+
+  .story {
+    grid-column: unset;
+    // grid-column: 2/4;
+    // grid-row: 1/-1;
+    height: 500px;
+
+    &__context {
+      padding: 0 2.625rem 2.5rem 2.625rem;
+    }
+  }
+}
+
+// Main section features
 .features {
   background-color: $white;
   padding: 5rem 0;
@@ -899,7 +926,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   object-fit: cover;
 
   &--tablet,
-  &--desktop {
+  &--desktop,
+  &--secondary {
     display: none;
   }
 
@@ -915,6 +943,16 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--designed {
     object-position: top;
+  }
+
+  @media (min-width: 768px) {
+    &--primary {
+      display: none;
+    }
+
+    &--secondary {
+      display: block;
+    }
   }
 }
 
