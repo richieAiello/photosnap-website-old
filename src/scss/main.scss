@@ -237,6 +237,68 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@media (min-width: 768px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 495px 273px 1fr;
+    grid-template-rows: 650px;
+
+    .container--secondary {
+      width: unset;
+      margin-inline: unset;
+    }
+
+    &__context {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      order: unset;
+      padding: 0 3.375rem;
+      margin-block: 10.8125rem;
+  
+      .accent {
+        height: 100%;
+        width: 6px;
+      }
+    }
+  
+    &__heading {
+      margin-bottom: 1.3125rem;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      letter-spacing: 4.17px;
+    }
+  
+    // &__description {
+    //   order: -1;
+    //   font-size: 0.75rem;
+    //   line-height: 15.62px;
+    //   letter-spacing: 2px;
+    //   margin-bottom: 1rem;
+    // }
+  
+    // &__sub-text {
+    //   font-size: 0.8125rem;
+    //   line-height: 16.93px;
+    //   margin-bottom: 1.5rem;
+  
+    //   .opaque {
+    //     opacity: 75%;
+    //     margin-right: 0.5rem;
+    //   }
+    // }
+  
+    // &--secondary {
+  
+    //   .hero__context {
+    //     display: flex;
+    //     flex-direction: column;
+    //     padding: 3rem 0;
+    //   }
+    // }
+  }
+}
+
 /****************************************
   MAIN
 ****************************************/
@@ -1036,6 +1098,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       margin-top: 0;
     }
 
+    &--hero {
+      margin-top: auto;
+    }
+
     &--footer {
       grid-column: 2;
       grid-row: 1;
@@ -1063,7 +1129,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   &--hero {
-    object-position: top;
+    object-position: 50% 35%;
     height: 294px;
   }
 
@@ -1077,12 +1143,12 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 
   @media (min-width: 768px) {
-    &--primary {
-      display: none;
-    }
 
-    &--secondary {
-      display: block;
+    &--hero {
+      grid-column: 3/-1;
+      object-position: center;
+      height: 100%;
+      width: 100%;
     }
   }
 }
