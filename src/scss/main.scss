@@ -32,12 +32,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   margin-inline: auto;
 
   &--secondary {
-    width: calc(100% - 3.5rem);
+    width: calc(100% - 4rem);
     margin-inline: auto;
   }
 
   @media (min-width: 768px) {
-    width: min(100% - 5rem, 1110px);
+    &,
+    &--secondary {
+      width: min(100% - 5rem, 1110px);
+    }
   }
 }
 
@@ -845,9 +848,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 // Main section beta
 .beta {
-  background-image: url(../assets/shared/mobile/bg-beta.jpg);
+  background-image: url(../assets/shared/desktop/bg-beta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 0%;
   color: $white;
 
   &__context {
@@ -865,9 +869,27 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &__heading {
     margin-bottom: 1.5rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-    letter-spacing: 3.33px;
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+
+    &__context {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4.25rem 0;
+      position: unset;
+
+      .accent {
+        height: 100%;
+        width: 6px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 0;
+    }
   }
 }
 
