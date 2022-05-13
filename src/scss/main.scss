@@ -27,15 +27,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   line-height: 1.5625rem;
 }
 
-.btn,
-.link {
-  display: inline-block;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: inherit;
-}
-
 .container {
   width: calc(100% - 3rem);
   margin-inline: auto;
@@ -44,6 +35,19 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     width: calc(100% - 3.5rem);
     margin-inline: auto;
   }
+
+  @media (min-width: 768px) {
+    width: calc(100% - 5rem);
+  }
+}
+
+.btn,
+.link {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
 }
 
 .heading {
@@ -105,6 +109,35 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     &:hover,
     &:focus {
       color: rgba($black, 30%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__menu {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      position: unset;
+    }
+
+    &__list {
+      display: flex;
+      border-bottom: unset;
+      margin-inline: auto;
+    }
+  
+    &__item {
+      margin-bottom: 0;
+
+      &:nth-of-type(2) {
+        margin-inline: 2.25rem;
+      }
+    }
+  
+    &__link {
+      font-size: 0.75rem;
+      line-height: 15.62px;
+      letter-spacing: 2px;
     }
   }
 }
@@ -914,6 +947,21 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   &--footer {
     .arrow {
       margin-left: 1.375rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &--hamburger {
+      display: none;
+    }
+
+    &--nav {
+      width: unset;
+      font-size: 0.75rem;
+      line-height: 15.62px;
+      letter-spacing: 2px;
+      padding: 0.75rem 1.5rem;
+      margin-top: 0;
     }
   }
 }
