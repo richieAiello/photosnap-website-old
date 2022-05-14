@@ -393,16 +393,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 // Main section stories
-.stories {
+.stories,
+.stories--secondary {
   background-color: $black;
   color: $white;
+}
 
-  &--secondary {
-    color: $white;
-
-    .story__heading {
-      margin-top: 0;
-    }
+.stories--secondary {
+  .story__heading {
+    margin-top: 0;
   }
 }
 
@@ -540,36 +539,38 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 @media (min-width: 400px) {
   .stories {
-    &__wrapper {
+    &__wrapper,
+    &__wrapper--secondary {
       display: grid;
       grid-template-columns: 1fr 400px 1fr;
-      grid-template-rows: repeat(4, auto);
     }
 
-    &--secondary {
-      display: grid;
-      grid-template-columns: 1fr 400px 1fr;
-      grid-template-rows: repeat(16, auto);
-    }  
+    &__wrapper {
+      grid-template-rows: repeat(4, auto);
+
+      &--secondary {
+        grid-template-rows: repeat(16, auto);
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .stories .stories__wrapper,
-  .stories--secondary {
-    max-width: 840px;
-    margin-inline: auto;
-    grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
-  }
-
   .stories {
-    &__wrapper {
-      grid-template-rows: repeat(2, 1fr);
+     &__wrapper,
+     &__wrapper--secondary {
+      max-width: 840px;
+      margin-inline: auto;
+      grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
     }
 
-    &--secondary {
-      grid-template-rows: repeat(8, 1fr);
-    }  
+    &__wrapper {
+      grid-template-rows: repeat(2, 1fr);
+
+      &--secondary {
+        grid-template-rows: repeat(8, 1fr);
+      }  
+    }
   }
 
   .story {
@@ -668,16 +669,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     width: max-content;
     margin-inline: auto;
     margin-bottom: 2.5rem;
-
-    // &--secondary {
-      
-    // }
   }
 
   &__heading {
     font-size: 1.125rem;
     transition: all 400ms;
-    // line-height: 1.5625rem;
   }
 
   &__track,
@@ -773,17 +769,79 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@media (min-width: 768px) {
+  .purchase {
+    padding: 7rem 0;
+  }
+  
+  .plan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: flex-start;
+    max-width: 689px;
+    margin-inline: auto;
+    text-align: left;
+    padding: 2.5rem 3rem 2.5rem 2.5rem;
+
+  
+    &--secondary {
+      .accent {
+        height: 100%;
+        width: 6px;
+      }
+    }
+  
+    &__heading {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  
+    &__text {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 26ch;
+      margin-inline: unset;
+      margin-bottom: 2rem;
+    }
+
+    &__price,
+    &__price-text {
+      grid-column: 2;
+      justify-self: flex-end;
+    }
+  
+    &__price {
+      grid-row: 1;
+    }
+  
+    &__price-text {
+      grid-row: 2;
+    }
+  }
+
+  .btn--plan {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
 // Main section secifications
 .compare {
   padding-bottom: 4rem;
+
+  .main__heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
 }
 
-// Hide specifics__label on larger screens
 .specifics {
-  width: 100%;
-  border-spacing: 0;
+  width: min(100%, 731px);
   border-collapse: collapse;
   text-align: left;
+  margin-inline: auto;
+  margin-top: -1.5rem;
 
   &__heading {
     font-weight: 700;
@@ -810,9 +868,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     grid-template-rows: repeat(2, auto);
     padding: 1.5rem 0;
 
-    &:first-of-type {
-      border-top: 1px solid $black;
-      margin-top: 1.5rem;
+    &--head {
+      border-bottom: 1px solid $black;
+      height: 4rem;
     }
   }
   
@@ -829,22 +887,61 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     line-height: 13.02px;
     letter-spacing: 1.67px;
     opacity: 50%;
-    text-transform: uppercase;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
 }
 
-// invisible properties get unset on larger screens
-// inviisible--data always remains the same
 .invisible,
 .invisible--data {
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .compare {
+    padding-bottom: 7rem;
+  }
+
+  .specifics {  
+    &__heading {
+      padding-left: 1.5rem;
+  
+      &--secondary {
+        padding-left: 0;
+      }
+    }
+  
+    &__row {
+      display: table-row;
+      height: 4rem;
+    }
+    
+    &__data {
+      display: table-cell;
+      width: 20%;
+      text-align: center;
+    }
+  
+    &__label {
+      display: none;
+    }
+  }
+
+  .invisible {
+    clip: unset;
+    clip-path: unset;
+    height: initial;
+    width: initial;
+    margin: initial;
+    overflow: initial;
+    position: initial;
+  }
 }
 
 // Main section beta
@@ -1171,6 +1268,11 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       letter-spacing: 2px;
       padding: 0.75rem 1.5rem;
       margin-top: 0;
+    }
+
+    &--plan {
+      width: min(100%, 270px);
+      text-align: center;
     }
 
     &--footer {
