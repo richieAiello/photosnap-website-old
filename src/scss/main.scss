@@ -829,14 +829,19 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 // Main section secifications
 .compare {
   padding-bottom: 4rem;
+
+  .main__heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
 }
 
-// Hide specifics__label on larger screens
 .specifics {
-  width: 100%;
-  border-spacing: 0;
+  width: min(100%, 731px);
   border-collapse: collapse;
   text-align: left;
+  margin-inline: auto;
+  margin-top: -1.5rem;
 
   &__heading {
     font-weight: 700;
@@ -863,9 +868,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     grid-template-rows: repeat(2, auto);
     padding: 1.5rem 0;
 
-    &:first-of-type {
-      border-top: 1px solid $black;
-      margin-top: 1.5rem;
+    &--head {
+      border-bottom: 1px solid $black;
+      height: 4rem;
     }
   }
   
@@ -882,22 +887,61 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     line-height: 13.02px;
     letter-spacing: 1.67px;
     opacity: 50%;
-    text-transform: uppercase;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
 }
 
-// invisible properties get unset on larger screens
-// inviisible--data always remains the same
 .invisible,
 .invisible--data {
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .compare {
+    padding-bottom: 7rem;
+  }
+
+  .specifics {  
+    &__heading {
+      padding-left: 1.5rem;
+  
+      &--secondary {
+        padding-left: 0;
+      }
+    }
+  
+    &__row {
+      display: table-row;
+      height: 4rem;
+    }
+    
+    &__data {
+      display: table-cell;
+      width: 20%;
+      text-align: center;
+    }
+  
+    &__label {
+      display: none;
+    }
+  }
+
+  .invisible {
+    clip: unset;
+    clip-path: unset;
+    height: initial;
+    width: initial;
+    margin: initial;
+    overflow: initial;
+    position: initial;
+  }
 }
 
 // Main section beta
