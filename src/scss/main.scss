@@ -779,6 +779,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     align-items: flex-start;
+    max-width: 689px;
+    margin-inline: auto;
     text-align: left;
     padding: 2.5rem 3rem 2.5rem 2.5rem;
 
