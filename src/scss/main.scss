@@ -304,6 +304,21 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@media (min-width: 1440px) {
+  .hero {
+    grid-template-columns: 1fr 610px 830px 1fr;
+
+    &__context {
+      padding: 0 7rem;
+    }
+
+    &--secondary {
+      .container {
+        width: 1216px;
+      }
+    }
+  }
+}
 /****************************************
   MAIN
 ****************************************/
@@ -397,6 +412,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 .stories--secondary {
   background-color: $black;
   color: $white;
+}
+
+.stories__wrapper,
+.stories__wrapper--secondary {
+  max-width: 400px;
+  margin-inline: auto;
+  // box-shadow: 
+  //   1rem 0 5rem 10rem $grey,
+  //   -1rem 0 5rem 10rem $grey;
 }
 
 .stories--secondary {
@@ -537,30 +561,12 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-@media (min-width: 400px) {
-  .stories {
-    &__wrapper,
-    &__wrapper--secondary {
-      display: grid;
-      grid-template-columns: 1fr 400px 1fr;
-    }
-
-    &__wrapper {
-      grid-template-rows: repeat(4, auto);
-
-      &--secondary {
-        grid-template-rows: repeat(16, auto);
-      }
-    }
-  }
-}
-
 @media (min-width: 768px) {
   .stories {
      &__wrapper,
      &__wrapper--secondary {
+      display: grid;
       max-width: 840px;
-      margin-inline: auto;
       grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
     }
 
@@ -1304,6 +1310,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
   &--hero {
     height: 294px;
+    width: 100%;
 
     &-home {
       object-position: 50% 35%;
