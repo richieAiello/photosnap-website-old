@@ -735,7 +735,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 // Main section purchase
 .purchase {
-  padding: 4rem 0;
+  padding-top: 4rem;
 
   &__wrapper {
     display: flex;
@@ -797,16 +797,17 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 3rem 1.5rem;
-
+  
   &--primary {
     background-color: #F5F5F5;
     color: $black;
+    padding: 3.5rem 2.25rem 2.5rem 2.25rem;
   }
 
   &--secondary {
     background-color: $black;
     color: $white; 
+    padding: 3rem 2.25rem;
     margin: 1.5rem 0;
     position: relative;
 
@@ -845,7 +846,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 @media (min-width: 768px) {
   .purchase {
-    padding: 7rem 0;
+    padding-top: 7rem;
   }
   
   .plan {
@@ -856,9 +857,12 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     max-width: 689px;
     margin-inline: auto;
     text-align: left;
-    padding: 2.5rem 3rem 2.5rem 2.5rem;
-
   
+    &--primary,
+    &--secondary {
+      padding: 2.5rem 3rem 2.5rem 2.5rem;
+    }
+
     &--secondary {
       .accent {
         height: 100%;
@@ -900,9 +904,49 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+@media (min-width: 1440px) {
+  .purchase {
+    padding-top: 7.5rem;
+
+    &__wrapper {
+      margin-bottom: 3rem;
+    }
+
+    &__wrapper--secondary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .plan {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-inline: unset;
+    
+    &--primary {
+      padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    &--secondary {
+      padding: 5.5rem 2.5rem 4.5rem 2.5rem;
+    }
+  
+    &--secondary {
+      margin: 0;
+  
+      .accent {
+        height: 6px;
+        width: 100%;
+      }
+    }
+  }
+}
+
 // Main section secifications
 .compare {
-  padding-bottom: 4rem;
+  padding: 4rem 0;
 
   .main__heading {
     text-align: center;
@@ -979,7 +1023,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
 @media (min-width: 768px) {
   .compare {
-    padding-bottom: 7rem;
+    padding: 7rem 0;
   }
 
   .specifics {  
@@ -1015,6 +1059,16 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     margin: initial;
     overflow: initial;
     position: initial;
+  }
+}
+
+@media (min-width: 1440px) {
+  .compare {
+    padding: 10rem 0;
+
+    .main__heading {
+      margin-bottom: 3rem;
+    }
   }
 }
 
