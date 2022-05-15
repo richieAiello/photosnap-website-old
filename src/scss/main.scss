@@ -715,12 +715,10 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     }
 
     &--secondary {
-      // display: grid;
-      // grid-template-columns: repeat(2, 1fr);
-      // grid-template-rows: repeat(3, 1fr);
-      // align-items: flex-end;
-      // row-gap: 4.5rem;
-      // padding: 7rem 0;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 6.5rem;
+      padding: 10rem 0;
     }
   }
 
@@ -732,14 +730,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     &__text {
       max-width: 32ch;
     }
-
-    // &--secondary {
-    //   margin-bottom: 0;
-
-    //   .feature__text {
-    //     max-width: 33ch;
-    //   }
-    // }
   }
 }
 
