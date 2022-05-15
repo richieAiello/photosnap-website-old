@@ -1,5 +1,14 @@
 import { iconContainer } from "./index";
 
+/* This file exists to insert inline svgs into the html pages
+for styling purposes. The <path /> element for each variable
+contains a fill and unique class. Each <linearGradient /> 
+element contains a unique id and gradient. On hover CSS is used
+to target the classes corresponding id via .iconClass {fill: url(#id);} 
+to change the icons fill color from white to its specfic gradient.
+Each svg is wrapped with a link. */
+
+// Link containing an inline svg for facebook
 const facebook = `
   <a href="#" class="footer__icon-link link">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -14,6 +23,7 @@ const facebook = `
   1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
   </a>`;
 
+// Link containing an inline svg for youtube
 const youtube = `
   <a href="#" class="footer__icon-link link">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
@@ -29,6 +39,7 @@ const youtube = `
   transform="translate(-33)"/></svg>
   </a>`; 
 
+// Link containing an inline svg for twitter
 const twitter = `
   <a href="#" class="footer__icon-link link">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
@@ -44,6 +55,7 @@ const twitter = `
   transform="translate(-66 -1)"/></svg>
   </a>`;
 
+// Link containing an inline svg for pinterest  
 const pinterest = `
   <a href="#" class="footer__icon-link link">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -63,6 +75,7 @@ const pinterest = `
   transform="translate(-100)"/></svg>
   </a>`;
 
+// Link containing an inline svg for instagram  
 const instagram = `
   <a href="#" class="footer__icon-link link">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
@@ -84,6 +97,9 @@ const instagram = `
   transform="translate(-133)"/></svg>
   </a>`;
 
+/* Sets the inner html of iconContainer to a template string
+containing to variables of the inline svgs above. Exported to
+index.js. */
 export const insertIcons = () => {
   iconContainer.innerHTML = `
     ${facebook} 

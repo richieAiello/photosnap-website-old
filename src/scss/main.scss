@@ -62,8 +62,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   background-image: $gradient;
 }
 
-// Placed below btn resets to not interfer with display toggling
-// Display: unset || on tablet and desktop
+// Must be placed below .btn base styles to properly toggle.
+// Otherwise .btn display would always overwrite .hidden. 
 .hidden {
   display: none;
 }
@@ -897,11 +897,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       grid-row: 2;
     }
   }
-
-  .btn--plan {
-    grid-column: 1;
-    grid-row: 3;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -1449,6 +1444,8 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     }
 
     &--plan {
+      grid-column: 1;
+      grid-row: 3;
       width: min(100%, 270px);
       text-align: center;
     }
@@ -1479,13 +1476,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 .image {
   max-width: 100%;
   object-fit: cover;
-
-  // Remove after refactor
-  &--tablet,
-  &--desktop,
-  &--secondary {
-    display: none;
-  }
 
   &--hero {
     height: 294px;
