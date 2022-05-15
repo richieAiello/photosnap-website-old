@@ -583,7 +583,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
      &__wrapper--secondary {
       display: grid;
       max-width: 840px;
-      grid-template-columns: minmax(auto, 420px) minmax(auto, 420px);
+      grid-template-columns: repeat(2, minmax(auto, 420px));
     }
 
     &__wrapper {
@@ -601,6 +601,30 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 
     &__context {
       padding: 0 2.625rem 2.5rem 2.625rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .stories {
+     &__wrapper,
+     &__wrapper--secondary {
+      max-width: 1680px;
+      grid-template-columns: repeat(4, minmax(auto, 420px));
+    }
+
+    &__wrapper {
+      grid-template-rows: 1fr;
+
+      &--secondary {
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  }
+
+  .story {
+    &__context {
+      padding: 0 2.5rem 2.5rem 2.5rem;
     }
   }
 }
@@ -1439,7 +1463,6 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
     }
 
     &--designed {
-      object-position: center;
       grid-column: 3/-1; 
     }
 
