@@ -376,6 +376,14 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       margin-block: auto;
     }
   }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 830px 610px 1fr;
+
+    &__context {
+      padding: 0 7rem;
+    }
+  }
 }
 
 .designed {
@@ -403,6 +411,14 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
       grid-row: 1;
       padding: 0 3.5rem;
       margin-block: auto;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 610px 830px 1fr;
+
+    &__context {
+      padding: 0 7rem;
     }
   }
 }
