@@ -10,7 +10,7 @@ Each svg is wrapped with a link. */
 
 // Link containing an inline svg for facebook
 const facebook = `
-  <a href="#" class="footer__icon-link link">
+  <a href="#" class="footer__icon-link link" aria-label="Visit the Photosnap facebook.">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
   <defs><linearGradient id="facebook" x1="100%" x2="0%" y1="0%" y2="100%">
   <stop offset="0%" stop-color="#63AFDB"/>
@@ -25,7 +25,7 @@ const facebook = `
 
 // Link containing an inline svg for youtube
 const youtube = `
-  <a href="#" class="footer__icon-link link">
+  <a href="#" class="footer__icon-link link" aria-label="Visit the Photosnap youtube.">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
   <defs><linearGradient id="youtube" x1="0%" x2="100%" y1="100%" y2="0%">
   <stop offset="0%" stop-color="#D3205A"/>
@@ -41,7 +41,7 @@ const youtube = `
 
 // Link containing an inline svg for twitter
 const twitter = `
-  <a href="#" class="footer__icon-link link">
+  <a href="#" class="footer__icon-link link" aria-label="Visit the Photosnap twitter.">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
   <defs><linearGradient id="twitter" x1="100%" x2="0%" y1="16.979%" y2="83.021%">
   <stop offset="0%" stop-color="#65FFEB"/><stop offset="100%" stop-color="#27718A"/>
@@ -57,7 +57,7 @@ const twitter = `
 
 // Link containing an inline svg for pinterest  
 const pinterest = `
-  <a href="#" class="footer__icon-link link">
+  <a href="#" class="footer__icon-link link" aria-label="Visit the Photosnap pinterest.">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
   <defs><linearGradient id="pinterest" x1="100%" x2="0%" y1="0%" y2="100%">
   <stop offset="0%" stop-color="#F6C683"/><stop offset="100%" stop-color="#DE3838"/>
@@ -77,7 +77,7 @@ const pinterest = `
 
 // Link containing an inline svg for instagram  
 const instagram = `
-  <a href="#" class="footer__icon-link link">
+  <a href="#" class="footer__icon-link link" aria-label="Visit the Photosnap instagram.">
   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
   <defs><linearGradient id="instagram" x1="0%" x2="50%" y1="100%" y2="0%">
   <stop offset="0%" stop-color="#FFC593"/><stop offset="51.945%" stop-color="#BC7198"/>
