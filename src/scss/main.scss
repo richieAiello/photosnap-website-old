@@ -371,6 +371,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+/****************************************
+  SECTION BEAUTIFUL INDEX.HTML
+****************************************/
 .beautiful {
   display: flex;
   flex-direction: column;
@@ -408,6 +411,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
+/****************************************
+  SECTION DESIGNED INDEX.HTML
+****************************************/
 .designed {
   display: flex;
   flex-direction: column;
@@ -445,7 +451,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-// Main section stories
+/****************************************
+  SECTION STORIES INDEX.HTML, STORIES.HTML
+****************************************/
 .stories,
 .stories--secondary {
   background-color: $black;
@@ -651,13 +659,15 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-// Main section features
+/****************************************
+  SECTION FEATURES INDEX.HTML, FEATURES.HTML
+****************************************/
 .features,
 .features--secondary {
   background-color: $white;
   padding: 5rem 0;
   text-align: center;
-  // Allows overlapping of slide accents in index.html.
+  // Allows overlapping of story slide accents in index.html.
   position: relative;
 }
 
@@ -755,7 +765,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-// Main section purchase
+/****************************************
+  SECTION PURCHASE PRICING.HTML
+****************************************/
 .purchase {
   padding-top: 4rem;
 
@@ -961,7 +973,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-// Main section secifications
+/****************************************
+  SECTION COMPARE PRICING.HTML
+****************************************/
 .compare {
   padding: 4rem 0;
 
@@ -1089,7 +1103,9 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   }
 }
 
-// Main section beta
+/****************************************
+  SECTION BETA PRICING.HTML, FEATURES.HTML
+****************************************/
 .beta {
   background-image: url(../assets/shared/desktop/bg-beta.jpg);
   background-repeat: no-repeat;
@@ -1144,7 +1160,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
   color: $white;
   padding: 3.5rem 0;
   text-align: center;
-  // Allows overlapping of slide accents in stories.html.
+  // Allows overlapping of story slide accents in stories.html.
   position: relative;
 
   &__wrapper {
@@ -1568,7 +1584,7 @@ $gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
 
 /****************************************
-  KEYFRAMES
+  KEYFRAMES AND ANIMATION CLASSES
 ****************************************/
 @keyframes slide-in {
   from {
